@@ -28,3 +28,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Call with coverage
         run: shellspec --kcov
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: |
+            coverage/cobertura.xml
+            coverage/sonarqube.xml
+            report/results.documentation
+            report/results_junit.xml

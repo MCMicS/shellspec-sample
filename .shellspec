@@ -1,8 +1,10 @@
 --require spec_helper
 --shell bash
---execdir @project/src
+#--execdir @project/src
 #--execdir @project/spec
 --kcov-options "--include-path=src"
+--output documentation
+--output junit
 
 
 ## Default kcov (coverage) options
